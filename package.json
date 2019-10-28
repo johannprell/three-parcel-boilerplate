@@ -12,6 +12,7 @@
     "dev": "parcel index.html"
   },
   "dependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "three": "^0.109.0"
   }
 }
