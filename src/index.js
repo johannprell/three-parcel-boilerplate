@@ -26,6 +26,9 @@ function init() {
   scene.add(cube)
   camera.position.z = 5
 
+  // Adjust rendering on window resize
+  window.addEventListener( 'resize', onWindowResize, false )
+
   // Start update loop
   update()
 }
@@ -40,4 +43,10 @@ function update() {
 function animateCube() {
   cube.rotation.x += 0.01
   cube.rotation.y += 0.01
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight
+  camera.updateProjectionMatrix()
+  renderer.setSize( window.innerWidth, window.innerHeight )
 }
